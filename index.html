@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RinconLiterario</title>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+    <header>
+        <h1>Rincón Literario</h1>
+    </header>
+    <nav id="navbar">
+        <ul>
+            <li></li>
+            <li><a href="#">Inicio</a></li>
+            <li><a href="#contacts">Acerca de</a></li>
+            <li><a onclick="mostrarPopup()">Contacto</a></li>
+        </ul>
+    </nav>
+
+    <section id="presentation">
+        <h2 id="intro">Bienvenido al Rincón Literario</h2>
+        <div id="text-presentation">
+            <p>El Rincón Literario es una página web dedicada a la pasión por la lectura y la exploración del mundo de los libros. Ofrece a los visitantes un espacio acogedor donde pueden sumergirse en reseñas de libros, descubrir nuevas obras literarias, participar en discusiones sobre diferentes géneros y conectar con una comunidad apasionada por la literatura. Además, el sitio proporciona recomendaciones personalizadas, entrevistas con autores, y recursos para aquellos que buscan ampliar su experiencia de lectura. En resumen, "Rincón Literario" es un destino virtual para los amantes de los libros que desean explorar, compartir y celebrar el maravilloso mundo de la literatura.</p>
+        </div>    
+    </section>
+
+    <section id="image-gallery">
+        <div id="content">
+            <div class="card" onclick="mostrarModal('Libro 1', 'Autor 1', 'img/portadas-libros-1.jpg', 'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industrys standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.')">
+                <img src="img/portadas-libros-1.jpg" alt="Libro 1">
+                <h3>Libro 1</h3>
+                <p>Autor 1</p>
+                <p class="description">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</p>
+            </div>
+            <div class="card" onclick="mostrarModal('Libro 2', 'Autor 2', 'img/portadas-libros-2.jpg','Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industrys standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.')">
+                <img src="img/portadas-libros-2.jpg" alt="Libro 2">
+                <h3>Libro 2</h3>
+                <p>Autor 2</p>
+                <p class="description">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</p>
+            </div>
+            <div class="card" onclick="mostrarModal('Libro 3', 'Autor 3', 'img/portadas-libros-3.jpg','Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industrys standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.')">
+                <img src="img/portadas-libros-3.jpg" alt="Libro 3">
+                <h3>Libro 3</h3>
+                <p>Autor 3</p>
+                <p class="description">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</p>
+            </div>
+            <div class="card" onclick="mostrarModal('Libro 4', 'Autor 4', 'img/portadas-libros-4.jpeg', 'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industrys standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.')">
+                <img src="img/portadas-libros-4.jpeg" alt="Libro 4">
+                <h3>Libro 4</h3>
+                <p>Autor 4</p>
+                <p class="description">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</p>
+            </div>
+            <div class="card" onclick="mostrarModal('Libro 5', 'Autor 5', 'img/portadas-libros-5.jpg', 'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industrys standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.')">
+                <img src="img/portadas-libros-5.jpg" alt="Libro 5">
+                <h3>Libro 5</h3>
+                <p>Autor 5</p>
+                <p class="description">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</p>
+            </div>
+            <div class="card" onclick="mostrarModal('Libro 6', 'Autor 6', 'img/portadas-libros-6.jpg', 'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industrys standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.')">
+                <img src="img/portadas-libros-6.jpg" alt="Libro 6">
+                <h3>Libro 6</h3>
+                <p>Autor 6</p>
+                <p class="description">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</p>
+            </div>
+            <div class="card" onclick="mostrarModal('Libro 7', 'Autor 7', 'img/portadas-libros-7.jpg', 'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industrys standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.')">
+                <img src="img/portadas-libros-7.jpg" alt="Libro 7">
+                <h3>Libro 7</h3>
+                <p>Autor 7</p>
+                <p class="description">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</p>
+            </div>
+            <div class="card" onclick="mostrarModal('Libro 8', 'Autor 8', 'img/portadas-libros-8.jpeg', 'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industrys standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.')">
+                <img src="img/portadas-libros-8.jpeg" alt="Libro 8">
+                <h3>Libro 8</h3>
+                <p>Autor 8</p>
+                <p class="description">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</p>
+            </div>
+            <div class="card" onclick="mostrarModal('Libro 9', 'Autor 9', 'img/portadas-libros-9.jpg', 'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industrys standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.')">
+                <img src="img/portadas-libros-9.jpg" alt="Libro 9">
+                <h3>Libro 9</h3>
+                <p>Autor 9</p>
+                <p class="description">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</p>
+            </div>
+            <div class="card" onclick="mostrarModal('Libro 10', 'Autor 10', 'img/portadas-libros-10.jpg', 'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industrys standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.')">
+                <img src="img/portadas-libros-10.jpg" alt="Libro 10">
+                <h3>Libro 10</h3>
+                <p>Autor 10</p>
+                <p class="description">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="contacts">
+        <h2>Contacto</h2>
+        <p>Email: info@mitienda.com</p>
+        <p>Dirección: Calle Principal, Ciudad</p>
+        <p>Teléfono: +1 234 567 890</p>
+    </section>
+
+    <section id="shops">
+        <h2>Nuestras Tiendas</h2>
+        <div class="shop">
+            <h3>Tienda 1</h3>
+            <p>Dirección: Calle A, Ciudad</p>
+            <p>Teléfono: +1 111 222 333</p>
+        </div>
+
+        <div class="shop">
+            <h3>Tienda 2</h3>
+            <p>Dirección: Calle B, Ciudad</p>
+            <p>Teléfono: +1 222 333 444</p>
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2023 Rincon Literario</p>
+    </footer>
+
+    <div id="my-modal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="cerrarModal()">&times;</span>
+            <img id="modal-image" src="" alt="Libro">
+            <h2 id="modal-title"></h2>
+            <p id="modal-author"></p> 
+            <p id="modal-description"></p> 
+        </div>
+    </div>
+
+    <div id="popup" class="popup">
+        <div class="popup-content">
+            <span class="close" onclick="cerrarPopup()">&times;</span>
+            <h2>Contacto</h2>
+            <p>Unete a nuestras redes para solucionar tus problemas</p>
+            <div id="icons">
+                <a href="https://www.instagram.com/" target="_blank"><i class="fa-brands fa-instagram"></i></a>
+                <a href="https://www.facebook.com/?lang=es" target="_blank"><i class="fa-brands fa-facebook"></i></a>
+                <a href="https://twitter.com/?lang=es" target="_blank"><i class="fa-brands fa-x-twitter"></i></a>
+                <a href="https://twitter.com/?lang=es" target="_blank"><i class="fa-brands fa-x-twitter"></i></a>
+                <a href="https://twitter.com/?lang=es" target="_blank"><i class="fa-brands fa-x-twitter"></i></a>
+            </div>
+            
+        </div>
+    </div>
+
+    <script src="https://kit.fontawesome.com/407693ff8c.js" crossorigin="anonymous"></script>
+    <script src="js/modals.js"></script>
+    <script src="js/navbar.js"></script>
+    <script src="js/popup.js"></script>
+</body>
+</html>
