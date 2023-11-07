@@ -1,9 +1,9 @@
 function mostrarModal(titulo, autor, imagen, description) {
-    var modal = document.getElementById("my-modal");
-    var modalImage = document.getElementById("modal-image");
-    var modalTitle = document.getElementById("modal-title");
-    var modalAuthor = document.getElementById("modal-author");
-    var modalDescription = document.getElementById("modal-description");
+    var modal = document.getElementById("unic-my-modal");
+    var modalImage = document.getElementById("unic-modal-image");
+    var modalTitle = document.getElementById("unic-modal-title");
+    var modalAuthor = document.getElementById("unic-modal-author");
+    var modalDescription = document.getElementById("unic-modal-description");
   
     modal.style.display = "block";
     modalImage.src = imagen;
@@ -13,12 +13,12 @@ function mostrarModal(titulo, autor, imagen, description) {
 }
   
 function cerrarModal() {
-    var modal = document.getElementById("my-modal");
+    var modal = document.getElementById("unic-my-modal");
     modal.style.display = "none";
 }
-  
+
 window.onclick = function (event) {
-    var modal = document.getElementById("my-modal");
+    var modal = document.getElementById("unic-my-modal");
     if (event.target == modal) {
         modal.style.display = "none";
     }
