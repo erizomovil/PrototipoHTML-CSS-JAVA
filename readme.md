@@ -21,12 +21,20 @@ Stores which has information on our stores.
 
 And the footer.
 
+With the navbar you can now travel to a new page and travel back to the welcome page.
+
+New page with a form to help the user find the books he wants.
+
+A list that shows the books the user is looking for.
+
 
 ## Built With
 
   - [PurpleBooth](https://github.com/PurpleBooth/a-good-readme-template) - used for the creation of readme
 
   - [Visual Studio Code](https://code.visualstudio.com/) - coded in Visual Studio code
+
+  - [ChatGPT](https://chat.openai.com/) - used for themes and books examples.
     
 
 ## Authors
