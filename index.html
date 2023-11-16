@@ -1,11 +1,13 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>RinconLiterario</title>
     <link rel="stylesheet" href="css/styles.css">
 </head>
+
 <body>
     <header>
         <h1>Rincón Literario</h1>
@@ -16,77 +18,139 @@
             <li><a href="#">Inicio</a></li>
             <li><a href="#contacts">Acerca de</a></li>
             <li><a onclick="mostrarPopup()">Contacto</a></li>
+            <li><a href="infobooks.html">Buscar</a></li>
         </ul>
     </nav>
 
     <section id="presentation">
         <h2 id="intro">Bienvenido al Rincón Literario</h2>
         <div id="text-presentation">
-            <p>El Rincón Literario es una página web dedicada a la pasión por la lectura y la exploración del mundo de los libros. Ofrece a los visitantes un espacio acogedor donde pueden sumergirse en reseñas de libros, descubrir nuevas obras literarias, participar en discusiones sobre diferentes géneros y conectar con una comunidad apasionada por la literatura. Además, el sitio proporciona recomendaciones personalizadas, entrevistas con autores, y recursos para aquellos que buscan ampliar su experiencia de lectura. En resumen, "Rincón Literario" es un destino virtual para los amantes de los libros que desean explorar, compartir y celebrar el maravilloso mundo de la literatura.</p>
-        </div>    
+            <p>El Rincón Literario es una página web dedicada a la pasión por la lectura y la exploración del mundo de
+                los libros. Ofrece a los visitantes un espacio acogedor donde pueden sumergirse en reseñas de libros,
+                descubrir nuevas obras literarias, participar en discusiones sobre diferentes géneros y conectar con una
+                comunidad apasionada por la literatura. Además, el sitio proporciona recomendaciones personalizadas,
+                entrevistas con autores, y recursos para aquellos que buscan ampliar su experiencia de lectura. En
+                resumen, "Rincón Literario" es un destino virtual para los amantes de los libros que desean explorar,
+                compartir y celebrar el maravilloso mundo de la literatura.</p>
+        </div>
     </section>
 
     <section id="image-gallery">
         <div id="content">
-            <div class="card" onclick="mostrarModal('Libro 1', 'Autor 1', 'img/portadas-libros-1.jpg', 'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industrys standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.')">
-                <img src="img/portadas-libros-1.jpg" alt="Libro 1">
-                <h3>Libro 1</h3>
+            <div class="card"
+                onclick="mostrarModal('Mi portada de libro', 'Autor 1', 'Policiaca', 'img/book-cover-1.jpg', 'En las páginas de Mi Portada de Libro, el renombrado diseñador de portadas de libros, Alex Harper, se encuentra repentinamente enredado en un misterio cuando una serie de asesinatos imitan las intrigantes ilustraciones de sus propias creaciones. Determinado a descubrir la verdad detrás de este macabro juego de imitación, Harper se sumerge en un oscuro laberinto de secretos editoriales, rivalidades literarias y crímenes que desafían la realidad, todo mientras lucha por mantenerse un paso adelante de un asesino obsesionado con su arte.')">
+                <img src="img/book-cover-1.jpg" alt="Mi portada de libro">
+                <h3>Mi portada de libro</h3>
                 <p>Autor 1</p>
-                <p class="description">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</p>
+                <p>Policiaca</p>
+                <p class="description">En las páginas de "Mi Portada de Libro", el renombrado diseñador de portadas de
+                    libros, Alex Harper, se encuentra repentinamente enredado en un misterio cuando una serie de
+                    asesinatos imitan las intrigantes ilustraciones de sus propias creaciones. Determinado a descubrir
+                    la verdad detrás de este macabro juego de imitación, Harper se sumerge en un oscuro laberinto de
+                    secretos editoriales, rivalidades literarias y crímenes que desafían la realidad, todo mientras
+                    lucha por mantenerse un paso adelante de un asesino obsesionado con su arte.</p>
             </div>
-            <div class="card" onclick="mostrarModal('Libro 2', 'Autor 2', 'img/portadas-libros-2.jpg','Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industrys standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.')">
-                <img src="img/portadas-libros-2.jpg" alt="Libro 2">
-                <h3>Libro 2</h3>
+            <div class="card"
+                onclick="mostrarModal('Crea tu Portada de Libro', 'Autor 2', 'Ciencia Ficción', 'img/book-cover-2.jpg','En un futuro distópico donde la realidad virtual y la creatividad son moneda de cambio, Mia, una talentosa diseñadora, descubre un programa que permite materializar las portadas de los libros en el mundo real. Cuando sus creaciones comienzan a revelar profecías y alterar la percepción de la verdad, Mia se embarca en una odisea interdimensional para desentrañar los misterios de su propia creatividad, enfrentándose a dilemas éticos y desafíos cósmicos mientras redefine el significado de la realidad.')">
+                <img src="img/book-cover-2.jpg" alt="Crea tu Portada de Libro">
+                <h3>Crea tu Portada de Libro</h3>
                 <p>Autor 2</p>
-                <p class="description">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</p>
+                <p>Ciencia Ficción</p>
+                <p class="description">En un futuro distópico donde la realidad virtual y la creatividad son moneda de
+                    cambio, Mia, una talentosa diseñadora, descubre un programa que permite materializar las portadas de
+                    los libros en el mundo real. Cuando sus creaciones comienzan a revelar profecías y alterar la
+                    percepción de la verdad, Mia se embarca en una odisea interdimensional para desentrañar los
+                    misterios de su propia creatividad, enfrentándose a dilemas éticos y desafíos cósmicos mientras
+                    redefine el significado de la realidad.</p>
             </div>
-            <div class="card" onclick="mostrarModal('Libro 3', 'Autor 3', 'img/portadas-libros-3.jpg','Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industrys standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.')">
-                <img src="img/portadas-libros-3.jpg" alt="Libro 3">
-                <h3>Libro 3</h3>
+            <div class="card"
+                onclick="mostrarModal('El Último Eco de la Ciudad de las Máquinas', 'Autor 3', 'Romance', 'img/book-cover-3.jpg','En una metrópolis futurista alimentada por inteligencia artificial, un ingeniero descubre un eco persistente que revela antiguas leyendas de una humanidad olvidada. Enfrentando la obsolescencia de las máquinas, se embarca en una odisea para restaurar la conexión perdida entre la tecnología y el espíritu humano.')">
+                <img src="img/book-cover-3.jpg" alt="El Último Eco de la Ciudad de las Máquinas">
+                <h3>El Último Eco de la Ciudad de las Máquinas</h3>
                 <p>Autor 3</p>
-                <p class="description">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</p>
+                <p>Romance</p>
+                <p class="description">En una metrópolis futurista alimentada por inteligencia artificial, un ingeniero
+                    descubre un eco persistente que revela antiguas leyendas de una humanidad olvidada. Enfrentando la
+                    obsolescencia de las máquinas, se embarca en una odisea para restaurar la conexión perdida entre la
+                    tecnología y el espíritu humano.</p>
             </div>
-            <div class="card" onclick="mostrarModal('Libro 4', 'Autor 4', 'img/portadas-libros-4.jpeg', 'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industrys standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.')">
-                <img src="img/portadas-libros-4.jpeg" alt="Libro 4">
-                <h3>Libro 4</h3>
+            <div class="card"
+                onclick="mostrarModal('El Canto de las Hojas Doradas', 'Autor 4', 'Aventura', 'img/book-cover-4.jpeg', 'En un bosque encantado donde las hojas cantan melodías mágicas, un músico aventurero se sumerge en la búsqueda de la legendaria partitura de las Hojas Doradas. Cada canción revela fragmentos de la historia del bosque y desbloquea poderes musicales que transforman la realidad a su alrededor.')">
+                <img src="img/book-cover-4.jpeg" alt="El Canto de las Hojas Doradas">
+                <h3>El Canto de las Hojas Doradas</h3>
                 <p>Autor 4</p>
-                <p class="description">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</p>
+                <p>Aventura</p>
+                <p class="description">En un bosque encantado donde las hojas cantan melodías mágicas, un músico
+                    aventurero se sumerge en la búsqueda de la legendaria partitura de las Hojas Doradas. Cada canción
+                    revela fragmentos de la historia del bosque y desbloquea poderes musicales que transforman la
+                    realidad a su alrededor.</p>
             </div>
-            <div class="card" onclick="mostrarModal('Libro 5', 'Autor 5', 'img/portadas-libros-5.jpg', 'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industrys standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.')">
-                <img src="img/portadas-libros-5.jpg" alt="Libro 5">
-                <h3>Libro 5</h3>
+            <div class="card"
+                onclick="mostrarModal('El Susurro de las Estrellas Perdidas', 'Autor 5', 'Terror y misterio', 'img/book-cover-5.jpg', 'En un universo lejano, un astrónomo descubre un antiguo libro que revela la ubicación de estrellas perdidas. Aventurándose en un viaje interestelar, desentraña secretos cósmicos mientras enfrenta desafíos que ponen a prueba su valentía y comprensión del universo.')">
+                <img src="img/book-cover-5.jpg" alt="El Susurro de las Estrellas Perdidas">
+                <h3>El Susurro de las Estrellas Perdidas</h3>
                 <p>Autor 5</p>
-                <p class="description">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</p>
+                <p>Terror y misterio</p>
+                <p class="description">En un universo lejano, un astrónomo descubre un antiguo libro que revela la
+                    ubicación de estrellas perdidas. Aventurándose en un viaje interestelar, desentraña secretos
+                    cósmicos mientras enfrenta desafíos que ponen a prueba su valentía y comprensión del universo.</p>
             </div>
-            <div class="card" onclick="mostrarModal('Libro 6', 'Autor 6', 'img/portadas-libros-6.jpg', 'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industrys standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.')">
-                <img src="img/portadas-libros-6.jpg" alt="Libro 6">
-                <h3>Libro 6</h3>
+            <div class="card"
+                onclick="mostrarModal('Sombras en el Laberinto del Tiempo', 'Autor 6', 'Terror y misterio', 'img/book-cover-6.jpg', 'En un laberinto temporal donde pasado, presente y futuro convergen, un arqueólogo temporal se embarca en una misión para salvar la línea temporal de colapsar. Con encuentros inesperados con versiones pasadas y futuras de sí mismo, se teje una trama intrincada de paradojas temporales.')">
+                <img src="img/book-cover-6.jpg" alt="Sombras en el Laberinto del Tiempo">
+                <h3>Sombras en el Laberinto del Tiempo</h3>
                 <p>Autor 6</p>
-                <p class="description">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</p>
+                <p>Terror y misterio</p>
+                <p class="description">En un laberinto temporal donde pasado, presente y futuro convergen, un arqueólogo
+                    temporal se embarca en una misión para salvar la línea temporal de colapsar. Con encuentros
+                    inesperados con versiones pasadas y futuras de sí mismo, se teje una trama intrincada de paradojas
+                    temporales.</p>
             </div>
-            <div class="card" onclick="mostrarModal('Libro 7', 'Autor 7', 'img/portadas-libros-7.jpg', 'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industrys standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.')">
-                <img src="img/portadas-libros-7.jpg" alt="Libro 7">
-                <h3>Libro 7</h3>
+            <div class="card"
+                onclick="mostrarModal('Risas en el Rincón de los Absurdos', 'Autor 7', 'Humor', 'img/book-cover-7.jpg', 'En la tranquila ciudad de Absurdoville, donde lo extraño es la norma, el protagonista, un detective aficionado a los calcetines de lunares, se ve envuelto en un misterio hilarante: el robo masivo de narices de plástico. A medida que sigue las extrañas pistas, se encuentra con personajes aún más extravagantes y descubre que detrás de cada risa hay un mensaje oculto sobre la importancia de no tomarse la vida demasiado en serio. ¡Prepárate para una aventura absurda llena de carcajadas y narices perdidas!')">
+                <img src="img/book-cover-7.jpg" alt="Risas en el Rincón de los Absurdos">
+                <h3>Risas en el Rincón de los Absurdos</h3>
                 <p>Autor 7</p>
-                <p class="description">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</p>
+                <p>Humor</p>
+                <p class="description">En la tranquila ciudad de Absurdoville, donde lo extraño es la norma, el
+                    protagonista, un detective aficionado a los calcetines de lunares, se ve envuelto en un misterio
+                    hilarante: el robo masivo de narices de plástico. A medida que sigue las extrañas pistas, se
+                    encuentra con personajes aún más extravagantes y descubre que detrás de cada risa hay un mensaje
+                    oculto sobre la importancia de no tomarse la vida demasiado en serio. ¡Prepárate para una aventura
+                    absurda llena de carcajadas y narices perdidas!</p>
             </div>
-            <div class="card" onclick="mostrarModal('Libro 8', 'Autor 8', 'img/portadas-libros-8.jpeg', 'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industrys standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.')">
-                <img src="img/portadas-libros-8.jpeg" alt="Libro 8">
-                <h3>Libro 8</h3>
+            <div class="card"
+                onclick="mostrarModal('Versos de la Luna Silente', 'Autor 8', 'Poesía', 'img/book-cover-8.jpeg', 'En Versos de la Luna Silente, cada poema es una melodía escrita en la penumbra de la noche. Entre sus líneas, las palabras bailan con la luz de las estrellas, tejendo sueños y suspiros en una sinfonía de poesía que invita a los lectores a perderse en la magia de la contemplación nocturna.')">
+                <img src="img/book-cover-8.jpeg" alt="Versos de la Luna Silente">
+                <h3>Versos de la Luna Silente</h3>
                 <p>Autor 8</p>
-                <p class="description">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</p>
+                <p>Poesía</p>
+                <p class="description">En "Versos de la Luna Silente", cada poema es una melodía escrita en la penumbra
+                    de la noche. Entre sus líneas, las palabras bailan con la luz de las estrellas, tejendo sueños y
+                    suspiros en una sinfonía de poesía que invita a los lectores a perderse en la magia de la
+                    contemplación nocturna.</p>
             </div>
-            <div class="card" onclick="mostrarModal('Libro 9', 'Autor 9', 'img/portadas-libros-9.jpg', 'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industrys standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.')">
-                <img src="img/portadas-libros-9.jpg" alt="Libro 9">
-                <h3>Libro 9</h3>
-                <p>Autor 9</p>
-                <p class="description">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</p>
+            <div class="card"
+                onclick="mostrarModal('El Oráculo de los Sueños Olvidados', 'Autor 1', 'Mitología', 'img/book-cover-9.jpg', 'En las páginas de El Oráculo de los Sueños Olvidados, los mitos antiguos cobran vida. A través de relatos entrelazados de dioses olvidados y héroes perdidos, el libro desentraña los enigmas del Olimpo y más allá, revelando secretos que han yacido dormidos en la memoria del tiempo. Un viaje mítico que despierta la fascinación por los mitos perdurables de la humanidad.')">
+                <img src="img/book-cover-9.jpg" alt="El Oráculo de los Sueños Olvidados">
+                <h3>El Oráculo de los Sueños Olvidados</h3>
+                <p>Autor 1</p>
+                <p>Mitología</p>
+                <p class="description">En las páginas de "El Oráculo de los Sueños Olvidados", los mitos antiguos cobran
+                    vida. A través de relatos entrelazados de dioses olvidados y héroes perdidos, el libro desentraña
+                    los enigmas del Olimpo y más allá, revelando secretos que han yacido dormidos en la memoria del
+                    tiempo. Un viaje mítico que despierta la fascinación por los mitos perdurables de la humanidad.</p>
             </div>
-            <div class="card" onclick="mostrarModal('Libro 10', 'Autor 10', 'img/portadas-libros-10.jpg', 'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industrys standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.')">
-                <img src="img/portadas-libros-10.jpg" alt="Libro 10">
-                <h3>Libro 10</h3>
-                <p>Autor 10</p>
-                <p class="description">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</p>
+            <div class="card"
+                onclick="mostrarModal('El Viaje de las Estrellas Perdidas', 'Autor 1', 'Cuento', 'img/book-cover-10.jpg', 'Un intrépido explorador espacial, acompañado por un astuto robot y una traviesa criatura alienígena, emprende una odisea por galaxias lejanas. En su búsqueda de estrellas desaparecidas, se encuentran con mundos alienígenas, resuelven acertijos cósmicos y descubren que, a veces, las estrellas perdidas guardan secretos que iluminan el camino de regreso a casa.')">
+                <img src="img/book-cover-10.jpg" alt="El Viaje de las Estrellas Perdidas">
+                <h3>El Viaje de las Estrellas Perdidas</h3>
+                <p>Autor 1</p>
+                <p>Cuento</p>
+                <p class="description">Un intrépido explorador espacial, acompañado por un astuto robot y una traviesa
+                    criatura alienígena, emprende una odisea por galaxias lejanas. En su búsqueda de estrellas
+                    desaparecidas, se encuentran con mundos alienígenas, resuelven acertijos cósmicos y descubren que, a
+                    veces, las estrellas perdidas guardan secretos que iluminan el camino de regreso a casa.</p>
             </div>
         </div>
     </section>
@@ -114,7 +178,17 @@
     </section>
 
     <footer>
-        <p>&copy; 2023 Rincon Literario</p>
+        <div class="row">
+            <div class="col-sm-4">
+                <p>Reservado derechos de admision</p>
+            </div>
+            <div class="col-sm-4">
+                <p>&copy; 2023 Rincon Literario</p>
+            </div>
+            <div class="col-sm-4">
+                <p>boombardeen torremolinos</p>
+            </div>
+        </div>
     </footer>
 
     <div id="unic-my-modal" class="unic-modal">
@@ -122,8 +196,17 @@
             <span class="close" onclick="cerrarModal()">&times;</span>
             <img id="unic-modal-image" src="ejemplo-1" alt="Libro">
             <h2 id="unic-modal-title"></h2>
-            <p id="unic-modal-author"></p> 
-            <p id="unic-modal-description"></p> 
+            <div class="row">
+                <div class="col-sm-3"></div>
+                <div class="col-sm-3">
+                    <p id="unic-modal-author"></p>
+                </div>
+                <div class="col-sm-3">
+                    <p id="unic-modal-genere"></p>
+                </div>
+                <div class="col-sm-3"></div>
+            </div>
+            <p id="unic-modal-description"></p>
         </div>
     </div>
 
@@ -139,7 +222,7 @@
                 <a href="https://twitter.com/?lang=es" target="_blank"><i class="fa-brands fa-x-twitter"></i></a>
                 <a href="https://twitter.com/?lang=es" target="_blank"><i class="fa-brands fa-x-twitter"></i></a>
             </div>
-            
+
         </div>
     </div>
 
@@ -153,4 +236,5 @@
     <!-- Latest compiled JavaScript -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
 </body>
+
 </html>

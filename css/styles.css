@@ -1,4 +1,4 @@
-*{
+* {
     margin: 0;
     padding: 0;
 }
@@ -16,14 +16,19 @@ nav {
     z-index: 2;
     font-size: medium;
 }
-  
+
 nav ul {
     list-style: none;
     padding: 0;
     margin: 0;
     display: flex;
 }
-  
+
+nav li {
+    color: white;
+    cursor: pointer;
+}
+
 nav a {
     text-decoration: none;
     color: #fff;
@@ -37,15 +42,15 @@ nav a {
     width: 100%;
 }
 
-#presentation{
-    margin: 1rem, 5rem;
+#presentation {
+    margin: 1rem 5rem;
 }
 
-#text-presentation{
+#text-presentation {
     margin-top: 1rem;
 }
 
-#intro{
+#intro {
     text-align: center;
 }
 
@@ -53,8 +58,13 @@ section {
     padding: 2em;
 }
 
-#image-gallery{
+#image-gallery {
     background-color: #696969;
+}
+
+#book-rever-image-gallery {
+    background-color: #696969;
+    visibility: hidden;
 }
 
 #content {
@@ -66,6 +76,10 @@ section {
 
 #contacts {
     background-color: #f2f2f2;
+}
+
+#shops {
+    margin-bottom: 8em;
 }
 
 .shop {
@@ -108,12 +122,12 @@ section {
     z-index: 3;
 }
 
-#unic-modal-image{
+#unic-modal-image {
     width: 50vw;
     height: 70vh;
 }
 
-.description{
+.description {
     display: none;
 }
 
@@ -123,9 +137,13 @@ section {
     left: 50%;
     transform: translate(-50%, -50%);
     background-color: #fff;
-    padding: 20px;
+    padding: 1em;
     text-align: center;
     border-radius: 8px;
+}
+
+#unic-modal-description {
+    font-size: small;
 }
 
 .close {
@@ -159,7 +177,7 @@ footer {
     height: 100%;
     background-color: rgba(0, 0, 0, 0.7);
 }
-  
+
 .popup-content {
     position: absolute;
     width: 40%;
@@ -172,17 +190,26 @@ footer {
     text-align: center;
     border-radius: 8px;
 }
-#icons a{
+
+#icons a {
     color: black;
     font-size: xx-large;
 }
-  
+
+#Header-book-list {
+    margin-top: 1em;
+}
+
+#search-results {
+    margin-top: 6em;
+    margin-bottom: 3em;
+}
 
 
 /* Extra small devices (phones, 600px and down) */
 @media only screen and (max-width: 600px) {
     .card {
-        width: calc(100% - 20px); 
+        width: calc(100% - 20px);
         border: 1px solid #696969;
         border-radius: 8px;
         margin: 10px;
@@ -192,16 +219,18 @@ footer {
         box-sizing: border-box;
     }
 
-    #unic-modal-image{
+    #unic-modal-image {
         width: 70vw;
         height: 55vh;
     }
+
     nav {
         background-color: #555;
         position: relative;
         z-index: 2;
         font-size: medium;
     }
+
     footer {
         background-color: #333;
         color: #fff;
@@ -211,16 +240,22 @@ footer {
         bottom: 0;
         width: 100%;
     }
+
     .card img {
         width: 100%;
         height: 30rem;
         border-radius: 4px;
     }
+
+    #shops {
+        margin-bottom: 6em;
+    }
 }
+
 /* Small devices (portrait tablets and large phones, 600px and up) */
 @media only screen and (min-width: 600px) {
     .card {
-        width: calc(50% - 20px); 
+        width: calc(50% - 20px);
         border: 1px solid #696969;
         border-radius: 8px;
         margin: 10px;
@@ -229,10 +264,12 @@ footer {
         transition: transform 0.3s;
         box-sizing: border-box;
     }
-    #unic-modal-image{
+
+    #unic-modal-image {
         width: 70vw;
         height: 55vh;
     }
+
     footer {
         background-color: #333;
         color: #fff;
@@ -242,10 +279,15 @@ footer {
         bottom: 0;
         width: 100%;
     }
+
     .card img {
         width: 100%;
         height: 23rem;
         border-radius: 4px;
+    }
+
+    #shops {
+        margin-bottom: 7em;
     }
 }
 
@@ -253,7 +295,7 @@ footer {
 @media only screen and (min-width: 768px) {
 
     .card {
-        width: calc(33.3% - 20px); 
+        width: calc(33.3% - 20px);
         border: 1px solid #696969;
         border-radius: 8px;
         margin: 10px;
@@ -262,16 +304,19 @@ footer {
         transition: transform 0.3s;
         box-sizing: border-box;
     }
-    #unic-modal-image{
+
+    #unic-modal-image {
         width: 40vw;
         height: 60vh;
     }
+
     nav {
         background-color: #555;
         position: relative;
         z-index: 2;
         font-size: large;
     }
+
     footer {
         background-color: #333;
         color: #fff;
@@ -282,10 +327,15 @@ footer {
         width: 100%;
         font-size: large;
     }
+
     .card img {
         width: 100%;
         height: 20rem;
         border-radius: 4px;
+    }
+
+    #shops {
+        margin-bottom: 6em;
     }
 }
 
@@ -293,7 +343,7 @@ footer {
 @media only screen and (min-width: 992px) {
 
     .card {
-        width: calc(20% - 20px); 
+        width: calc(20% - 20px);
         border: 1px solid #696969;
         border-radius: 8px;
         margin: 10px;
@@ -302,10 +352,12 @@ footer {
         transition: transform 0.3s;
         box-sizing: border-box;
     }
-    #unic-modal-image{
+
+    #unic-modal-image {
         width: 30vw;
         height: 60vh;
     }
+
     header {
         background-color: #333;
         color: #fff;
@@ -313,12 +365,14 @@ footer {
         padding: 1em 0;
         font-size: x-large;
     }
+
     nav {
         background-color: #555;
         position: relative;
         z-index: 2;
         font-size: larger;
     }
+
     footer {
         background-color: #333;
         color: #fff;
@@ -329,17 +383,22 @@ footer {
         width: 100%;
         font-size: larger;
     }
+
     .card img {
         width: 100%;
         height: 16rem;
         border-radius: 4px;
+    }
+
+    #shops {
+        margin-bottom: 6em;
     }
 }
 
 /* Extra large devices (large laptops and desktops, 1200px and up) */
 @media only screen and (min-width: 1200px) {
     .card {
-        width: calc(15% - 20px); 
+        width: calc(15% - 20px);
         border: 1px solid #696969;
         border-radius: 8px;
         margin: 10px;
@@ -348,10 +407,12 @@ footer {
         transition: transform 0.3s;
         box-sizing: border-box;
     }
-    #unic-modal-image{
+
+    #unic-modal-image {
         width: 25vw;
         height: 60vh;
     }
+
     header {
         background-color: #333;
         color: #fff;
@@ -359,12 +420,14 @@ footer {
         padding: 1em 0;
         font-size: xx-large;
     }
+
     nav {
         background-color: #555;
         position: relative;
         z-index: 2;
         font-size: x-large;
     }
+
     footer {
         background-color: #333;
         color: #fff;
@@ -375,9 +438,14 @@ footer {
         width: 100%;
         font-size: x-large;
     }
+
     .card img {
         width: 100%;
         height: 18rem;
         border-radius: 4px;
+    }
+
+    #shops {
+        margin-bottom: 5em;
     }
 }
