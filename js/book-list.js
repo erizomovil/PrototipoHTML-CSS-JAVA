@@ -1,4 +1,4 @@
-const bookList = [
+const BOOKLIST = [
     { title: 'Mi portada de libro', author: 'Autor 1', genre: 'Aventura', reserved: false },
     { title: 'Crea tu Portada de Libro', author: 'Autor 2', genre: 'Ciencia Ficción', reserved: true },
     { title: 'El Último Eco de la Ciudad de las Máquinas', author: 'Autor 3', genre: 'Romance', reserved: false },
@@ -11,41 +11,80 @@ const bookList = [
     { title: 'El Viaje de las Estrellas Perdidas', author: 'Autor 1', genre: 'Cuento', reserved: true },
 ];
 
+const BUSCADOS = [
+    
+]
+
+function initialize() {
+    // Recuperar los datos de localStorage si existen
+    const BUSCADOS_STORAGE = localStorage.getItem("Buscados");
+    // Verificar si hay datos en localStorage y asignarlos a BUSCADOS
+    if (BUSCADOS_STORAGE) {
+        BUSCADOS.push(...JSON.parse(BUSCADOS_STORAGE));
+    }
+    if (BUSCADOS.length > 0) {
+        const RESULTS_CONTAINER = document.getElementById('search-results');
+
+        for (let index = 0; index < BUSCADOS.length; index++) {
+            const WRITE_LIST = document.createElement('li');
+            WRITE_LIST.className = 'list-group-item';
+            WRITE_LIST.textContent = `${BUSCADOS[index].title} - ${BUSCADOS[index].author} (${BUSCADOS[index].genre})${BUSCADOS[index].reserved ? ' - Reservado' : ''}`;
+
+            // Adjuntar el elemento al contenedor en el DOM
+            RESULTS_CONTAINER.appendChild(WRITE_LIST);
+        }
+    }
+}
+
+
 function searchBooks() {
     // Obtén los valores de búsqueda
-    const searchInputBook = document.getElementById('search-input-book').value.toLowerCase();
-    const searchInputAuthor = document.getElementById('search-input-author').value.toLowerCase();
-    const selectedGenre = document.getElementById('genre-select').value.toLowerCase();
-    const isReserved = document.getElementById('reserved-checkbox').checked;
+    const SEARCH_INPUT_BOOK = document.getElementById('search-input-book').value.toLowerCase();
+    const SEARCH_INPUT_AUTHOR = document.getElementById('search-input-author').value.toLowerCase();
+    const SELECTED_GENERE = document.getElementById('genre-select').value.toLowerCase();
+    const IS_RESERVED = document.getElementById('reserved-checkbox').checked;
 
-    if (searchInputBook === '' && selectedGenre === '' && searchInputAuthor === '') {
+    if (SEARCH_INPUT_BOOK === '' && SELECTED_GENERE === '' && SEARCH_INPUT_AUTHOR === '') {
         alert('Por favor, ingresa al menos el titulo de un libro o nombre de autor o selecciona un género.');
         return;
     }
 
+    localStorage.setItem("InputBook", JSON.stringify(SEARCH_INPUT_BOOK));
+    localStorage.setItem("InputAuthor", JSON.stringify(SEARCH_INPUT_AUTHOR));
+    localStorage.setItem("InputGenere", JSON.stringify(SELECTED_GENERE));
+    localStorage.setItem("InputReserved", JSON.stringify(IS_RESERVED));
     // Filtra la lista de libros según los criterios de búsqueda
-    const results = bookList.filter(book =>
-        (searchInputBook === '' || book.title.toLowerCase().includes(searchInputBook)) &&
-        (searchInputAuthor === '' || book.author.toLowerCase().includes(searchInputAuthor)) &&
-        (selectedGenre === '' || book.genre.toLowerCase() === selectedGenre) &&
-        (!isReserved || !book.reserved)
+    const RESULTS = BOOKLIST.filter(book =>
+        (SEARCH_INPUT_BOOK === '' || book.title.toLowerCase().includes(SEARCH_INPUT_BOOK)) &&
+        (SEARCH_INPUT_AUTHOR === '' || book.author.toLowerCase().includes(SEARCH_INPUT_AUTHOR)) &&
+        (SELECTED_GENERE === '' || book.genre.toLowerCase() === SELECTED_GENERE) &&
+        (!IS_RESERVED || !book.reserved)
     );
 
     // Muestra los resultados en la página
-    displayResults(results);
+    displayResults(RESULTS);
 }
 
-function displayResults(results) {
-    const resultsContainer = document.getElementById('search-results');
-
+function displayResults(RESULTS) {
+    const RESULTS_CONTAINER = document.getElementById('search-results');
     // Limpia los resultados anteriores
-    resultsContainer.innerHTML = '';
-
+    BUSCADOS.splice(0, BUSCADOS.length);
+    RESULTS_CONTAINER.innerHTML = '';
     // Muestra los resultados en la lista
-    results.forEach(book => {
-        const listItem = document.createElement('li');
-        listItem.className = 'list-group-item';
-        listItem.textContent = `${book.title} - ${book.author} (${book.genre})${book.reserved ? ' - Reservado' : ''}`;
-        resultsContainer.appendChild(listItem);
-    });
+    RESULTS.forEach(book => {
+        
+        const LIST_ITEM = document.createElement('li');
+        LIST_ITEM.className = 'list-group-item';
+        LIST_ITEM.textContent = `${book.title} - ${book.author} (${book.genre})${book.reserved ? ' - Reservado' : ''}`;
+
+        BUSCADOS.push({
+            title: book.title, 
+            author: book.author,
+            genre: book.genre,
+            reserved: book.reserved
+        });
+        localStorage.setItem("Buscados", JSON.stringify(BUSCADOS));
+        RESULTS_CONTAINER.appendChild(LIST_ITEM);
+    }); 
 }
+initialize();

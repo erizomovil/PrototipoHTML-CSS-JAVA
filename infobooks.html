@@ -23,43 +23,44 @@
     </nav>
 
     <div class="container">
-        <div class="row" id="Header-book-list">
-            <div class="col-sm-12">
-                <h1>Lista de Libros</h1>
+        <div id="visual">
+            <div class="row" id="Header-book-list">
+                <div class="col-sm-12">
+                    <h1>Lista de Libros</h1>
+                </div>
             </div>
+
+            <form id="search-form">
+                <div class="mb-3">
+                    <label for="search-input-book" class="form-label">Buscar por:</label>
+                    <input type="text" class="form-control" id="search-input-book" placeholder="Titulo">
+                </div>
+                <div class="mb-3">
+                    <label for="search-input-author" class="form-label">Buscar por:</label>
+                    <input type="text" class="form-control" id="search-input-author" placeholder="Autor">
+                </div>
+                <div class="mb-3">
+                    <label for="genre-select" class="form-label">Género:</label>
+                    <select class="form-select" id="genre-select">
+                        <option value="">Todos</option>
+                        <option>Aventura</option>
+                        <option>Ciencia Ficción</option>
+                        <option>Policiaca</option>
+                        <option>Terror y misterio</option>
+                        <option>Romance</option>
+                        <option>Humor</option>
+                        <option>Poesía</option>
+                        <option>Mitología</option>
+                        <option>Cuento</option>
+                    </select>
+                </div>
+                <div class="mb-3 form-check">
+                    <input type="checkbox" class="form-check-input" id="reserved-checkbox">
+                    <label class="form-check-label" for="reserved-checkbox">No Reservado</label>
+                </div>
+                <button type="button" class="btn btn-primary" onclick="searchBooks()">Buscar</button>
+            </form>
         </div>
-
-        <form id="search-form">
-            <div class="mb-3">
-                <label for="search-input-book" class="form-label">Buscar por:</label>
-                <input type="text" class="form-control" id="search-input-book" placeholder="Titulo">
-            </div>
-            <div class="mb-3">
-                <label for="search-input-author" class="form-label">Buscar por:</label>
-                <input type="text" class="form-control" id="search-input-author" placeholder="Autor">
-            </div>
-            <div class="mb-3">
-                <label for="genre-select" class="form-label">Género:</label>
-                <select class="form-select" id="genre-select">
-                    <option value="">Todos</option>
-                    <option>Aventura</option>
-                    <option>Ciencia Ficción</option>
-                    <option>Policiaca</option>
-                    <option>Terror y misterio</option>
-                    <option>Romance</option>
-                    <option>Humor</option>
-                    <option>Poesía</option>
-                    <option>Mitología</option>
-                    <option>Cuento</option>
-                </select>
-            </div>
-            <div class="mb-3 form-check">
-                <input type="checkbox" class="form-check-input" id="reserved-checkbox">
-                <label class="form-check-label" for="reserved-checkbox">No Reservado</label>
-            </div>
-            <button type="button" class="btn btn-primary" onclick="searchBooks()">Buscar</button>
-        </form>
-
         <!-- Resultados de la Búsqueda -->
         <ul id="search-results" class="list-group mt-3">
             <!-- Aquí se llenarán dinámicamente los resultados de la búsqueda -->
@@ -89,19 +90,6 @@
         </div>
     </section>
 
-    <footer>
-        <div class="row">
-            <div class="col-sm-4">
-                <p>Reservado derechos de admision</p>
-            </div>
-            <div class="col-sm-4">
-                <p>&copy; 2023 Rincon Literario</p>
-            </div>
-            <div class="col-sm-4">
-                <p>boombardeen torremolinos</p>
-            </div>
-        </div>
-    </footer>
 
 
     <div id="popup" class="popup">
@@ -118,6 +106,22 @@
             </div>
         </div>
     </div>
+
+
+    <footer>
+        <div class="row">
+            <div class="col-sm-4">
+                <p>Reservado derechos de admision</p>
+            </div>
+            <div class="col-sm-4">
+                <p>&copy; 2023 Rincon Literario</p>
+            </div>
+            <div class="col-sm-4">
+                <p>boombardeen torremolinos</p>
+            </div>
+        </div>
+    </footer>
+
 
     <script src="https://kit.fontawesome.com/407693ff8c.js" crossorigin="anonymous"></script>
     <script src="js/modals.js"></script>

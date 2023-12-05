@@ -36,6 +36,13 @@ nav a {
     display: block;
 }
 
+#visual{
+    border: black;
+    border-width: 50px;
+    border-radius: 4px;
+
+}
+
 .fixed-nav {
     position: fixed;
     top: 0;
