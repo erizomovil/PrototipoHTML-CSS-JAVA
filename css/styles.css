@@ -212,6 +212,20 @@ footer {
     margin-bottom: 3em;
 }
 
+#search-input-book-error{
+    color: red;
+    visibility: hidden;
+}
+#search-input-author-error{
+    color: red;
+    visibility: hidden;
+}
+#search-input-genre-error{
+    color: red;
+    visibility: hidden;
+}
+
+
 
 /* Extra small devices (phones, 600px and down) */
 @media only screen and (max-width: 600px) {
@@ -257,6 +271,7 @@ footer {
     #shops {
         margin-bottom: 6em;
     }
+    
 }
 
 /* Small devices (portrait tablets and large phones, 600px and up) */

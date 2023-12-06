@@ -41,23 +41,35 @@ function searchBooks() {
     // Obtén los valores de búsqueda
     const SEARCH_INPUT_BOOK = document.getElementById('search-input-book').value.toLowerCase();
     const SEARCH_INPUT_AUTHOR = document.getElementById('search-input-author').value.toLowerCase();
-    const SELECTED_GENERE = document.getElementById('genre-select').value.toLowerCase();
+    const SELECTED_GENRE = document.getElementById('genre-select').value.toLowerCase();
     const IS_RESERVED = document.getElementById('reserved-checkbox').checked;
-
-    if (SEARCH_INPUT_BOOK === '' && SELECTED_GENERE === '' && SEARCH_INPUT_AUTHOR === '') {
-        alert('Por favor, ingresa al menos el titulo de un libro o nombre de autor o selecciona un género.');
+    const BOOK_ERROR = document.getElementById("search-input-book-error");
+    const AUTHOR_ERROR = document.getElementById("search-input-author-error");
+    const GENRE_ERROR = document.getElementById("search-input-genre-error");
+    if (SEARCH_INPUT_BOOK === '' && SELECTED_GENRE === '' && SEARCH_INPUT_AUTHOR === '') {
+        if(SEARCH_INPUT_BOOK === '') {
+            BOOK_ERROR.style.visibility = "visible";
+        }
+        if(SEARCH_INPUT_AUTHOR === '') {
+            AUTHOR_ERROR.style.visibility = "visible";
+        }
+        if(SELECTED_GENRE === ''){
+            GENRE_ERROR.style.visibility = "visible";
+        }
         return;
     }
-
+    BOOK_ERROR.style.visibility = "hidden";
+    AUTHOR_ERROR.style.visibility = "hidden";
+    GENRE_ERROR.style.visibility = "hidden";
     localStorage.setItem("InputBook", JSON.stringify(SEARCH_INPUT_BOOK));
     localStorage.setItem("InputAuthor", JSON.stringify(SEARCH_INPUT_AUTHOR));
-    localStorage.setItem("InputGenere", JSON.stringify(SELECTED_GENERE));
+    localStorage.setItem("InputGenre", JSON.stringify(SELECTED_GENRE));
     localStorage.setItem("InputReserved", JSON.stringify(IS_RESERVED));
     // Filtra la lista de libros según los criterios de búsqueda
     const RESULTS = BOOKLIST.filter(book =>
         (SEARCH_INPUT_BOOK === '' || book.title.toLowerCase().includes(SEARCH_INPUT_BOOK)) &&
         (SEARCH_INPUT_AUTHOR === '' || book.author.toLowerCase().includes(SEARCH_INPUT_AUTHOR)) &&
-        (SELECTED_GENERE === '' || book.genre.toLowerCase() === SELECTED_GENERE) &&
+        (SELECTED_GENRE === '' || book.genre.toLowerCase() === SELECTED_GENRE) &&
         (!IS_RESERVED || !book.reserved)
     );
 
