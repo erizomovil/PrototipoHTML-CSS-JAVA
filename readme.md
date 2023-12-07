@@ -27,6 +27,10 @@ New page with a form to help the user find the books he wants.
 
 A list that shows the books the user is looking for.
 
+Now the list of books is saved in the user localstorage.
+
+And there's an option for administrators to add new books, change its information and delte books
+
 
 ## Built With
 
