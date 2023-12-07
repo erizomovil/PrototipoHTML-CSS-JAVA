@@ -115,6 +115,10 @@ section {
     padding: 2em;
 }
 
+#footer {
+    margin-bottom: 2rem;
+}
+
 #image-gallery {
     background-color: #696969;
 }
