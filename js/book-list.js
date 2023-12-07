@@ -1,23 +1,28 @@
-const BOOKLIST = [
-    { title: 'Mi portada de libro', author: 'Autor 1', genre: 'Aventura', reserved: false },
-    { title: 'Crea tu Portada de Libro', author: 'Autor 2', genre: 'Ciencia Ficción', reserved: true },
-    { title: 'El Último Eco de la Ciudad de las Máquinas', author: 'Autor 3', genre: 'Romance', reserved: false },
-    { title: 'El Canto de las Hojas Doradas', author: 'Autor 4', genre: 'Policiaca', reserved: false },
-    { title: 'El Susurro de las Estrellas Perdidas', author: 'Autor 5', genre: 'Terror y misterio', reserved: false },
-    { title: 'Sombras en el Laberinto del Tiempo', author: 'Autor 6', genre: 'Terror y misterio', reserved: false },
-    { title: 'Risas en el Rincón de los Absurdos', author: 'Autor 7', genre: 'Humor', reserved: true },
-    { title: 'Versos de la Luna Silente', author: 'Autor 8', genre: 'Poesía', reserved: true },
-    { title: 'El Oráculo de los Sueños Olvidados', author: 'Autor 1', genre: 'Mitología', reserved: false },
-    { title: 'El Viaje de las Estrellas Perdidas', author: 'Autor 1', genre: 'Cuento', reserved: true },
-];
-
 const BUSCADOS = [
     
 ]
 
+const BOOKLIST = [];
+
 function initialize() {
     // Recuperar los datos de localStorage si existen
     const BUSCADOS_STORAGE = localStorage.getItem("Buscados");
+
+    const LOCAL_STORAGE_ARRAY = JSON.parse(localStorage.getItem("booksArrayKey")) || [
+        { title: 'Mi portada de libro', author: 'Autor 1', genre: 'Aventura', reserved: false },
+        { title: 'Crea tu Portada de Libro', author: 'Autor 2', genre: 'Ciencia Ficción', reserved: true },
+        { title: 'El Último Eco de la Ciudad de las Máquinas', author: 'Autor 3', genre: 'Romance', reserved: false },
+        { title: 'El Canto de las Hojas Doradas', author: 'Autor 4', genre: 'Policiaca', reserved: false },
+        { title: 'El Susurro de las Estrellas Perdidas', author: 'Autor 5', genre: 'Terror y misterio', reserved: false },
+        { title: 'Sombras en el Laberinto del Tiempo', author: 'Autor 6', genre: 'Terror y misterio', reserved: false },
+        { title: 'Risas en el Rincón de los Absurdos', author: 'Autor 7', genre: 'Humor', reserved: true },
+        { title: 'Versos de la Luna Silente', author: 'Autor 8', genre: 'Poesía', reserved: true },
+        { title: 'El Oráculo de los Sueños Olvidados', author: 'Autor 1', genre: 'Mitología', reserved: false },
+        { title: 'El Viaje de las Estrellas Perdidas', author: 'Autor 1', genre: 'Cuento', reserved: true },
+    ];
+
+    BOOKLIST.push(...LOCAL_STORAGE_ARRAY);
+
     // Verificar si hay datos en localStorage y asignarlos a BUSCADOS
     if (BUSCADOS_STORAGE) {
         BUSCADOS.push(...JSON.parse(BUSCADOS_STORAGE));
