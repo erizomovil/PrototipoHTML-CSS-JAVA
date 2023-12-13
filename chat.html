@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/styles2.css">
+    <link rel="stylesheet" href="css/styles.css">
+    <title>Firebase Chat</title>
+</head>
+
+<body>
+
+    <header>
+        <h1>Rincón Literario</h1>
+    </header>
+
+    <nav id="navbar-admin">
+        <ul>
+            <li><a href="index.html">Volver</a></li>
+        </ul>
+    </nav>
+
+
+    <div id="chat-container">
+        <div id="messages-list"></div>
+
+        <form id="chat-form">
+            <input type="text" id="message-sender" name="message-sender" placeholder="Escribe tu nombre">
+            <input type="text" id="message-text" name="message-text" placeholder="Escribe aquí tu mensaje">
+            <button type="submit" id="send-button">Enviar mensaje</button>
+        </form>
+    </div>
+
+    <script type="module" src="js/firebase.js"></script>
+</body>
+
+</html>

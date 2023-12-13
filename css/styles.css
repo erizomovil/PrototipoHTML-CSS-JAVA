@@ -281,6 +281,7 @@ footer {
 
 
 
+
 /* Extra small devices (phones, 600px and down) */
 @media only screen and (max-width: 600px) {
     .card {
@@ -325,7 +326,15 @@ footer {
     #shops {
         margin-bottom: 6em;
     }
+
+    #popup-content {
+        width: 90%;
+      }
     
+      #icons a {
+        font-size: 1.5em;
+        margin: 5px;
+      }
 }
 
 /* Small devices (portrait tablets and large phones, 600px and up) */
@@ -365,6 +374,15 @@ footer {
     #shops {
         margin-bottom: 7em;
     }
+
+    #popup-content {
+        width: 60%;
+      }
+    
+      #icons a {
+        font-size: 2em;
+        margin: 10px;
+      }
 }
 
 /* Medium devices (landscape tablets, 768px and up) */
