@@ -15,7 +15,7 @@ The intro has a welcoming and an explanation of what we do and our pasion for bo
 
 The cards have the covers of the books we offer and ther tittle and author and if you click on them you can see their Book Blurb.
 
-Contact, which only provides information.
+Contact, which only provides information and has the link to the comunity chat.
 
 Stores which has information on our stores.
 
@@ -31,6 +31,7 @@ Now the list of books is saved in the user localstorage.
 
 And there's an option for administrators to add new books, change its information and delte books
 
+There's now a new page with a chat function to work as a forum for our comunity.
 
 ## Built With
 
